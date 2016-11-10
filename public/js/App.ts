@@ -19,6 +19,12 @@ namespace App {
                     controllerAs:'httpController'
 
                 })
+                .state ('posts', {
+                    url: '/posts',
+                    templateUrl: 'templates/posts.html',
+                    controller: App.PostsController,
+                    controllerAs: 'postsController'
+                })
         }
     ])
 }
