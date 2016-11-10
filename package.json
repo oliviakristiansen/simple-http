@@ -1,0 +1,14 @@
+{
+  "name": "simple-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olivia Lemmelin",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.8.23"
+  }
+}
