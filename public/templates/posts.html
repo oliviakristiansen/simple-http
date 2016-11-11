@@ -10,6 +10,7 @@
             <strong>description:</strong>{{post.description}}
             <strong>author:</strong>{{post.author}}
             <button ng-click="postsController.deletePost(post.id)">Delete Post</button>
+            <button ng-click="postsController.editPost(post.id)">Edit Post</button>
         </div>
     </li>
 </ul>

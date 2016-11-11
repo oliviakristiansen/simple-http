@@ -86,6 +86,7 @@ namespace App {
             .success ((response) => {
                 console.log ('Test data: ', response);
 
+                //below will reload the page when the save button is successful
                 this.stateService.reload ()
             })
             .error ((response) => {
@@ -96,12 +97,14 @@ namespace App {
             console.log ('Deleted!', + id)
 
             this.httpService ({
+                //below adding +id will specify that you only delete that specific posts by the id. So If you click the 4th post it will only delete that one.
                 url: '/posts/' + id,
                 method :'DELETE'
             })
             .success ((response) => {
                 console.log ('Post Deleted Successfully', response);
 
+                //below will direct the page to the home page when the post is deleted successfully.
                 this.stateService.go ('home')
             })
             .error ((response) => {
@@ -109,8 +112,16 @@ namespace App {
             })
         }
 
+        public editPost (postId) {
+            console.log ('post id: ' + postId);
 
+            this.stateService.go ('posts-edit',
+                {
+                    id: postId
+                }
+            );
 
+        }
 
     }
 }
