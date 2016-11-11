@@ -26,7 +26,7 @@ namespace App {
                     controllerAs: 'postsController'
                 })
                 .state ('posts-edit', {
-                    url: '/posts-edit',
+                    url: '/posts/edit',
                     templateUrl: 'templates/posts-edit.html',
                     controller: App.PostEditController,
                     controllerAs: 'postEditController',

@@ -2,15 +2,16 @@
 
 <form>
     <label>Title</label>
-    <input>
+    <input ng-model = "postEditController.post.title">
     <br>
 
     <label>Description</label>
-    <input>
+    <input ng-model = "postEditController.post.description">
     <br>
 
     <label>Author</label>
-    <input>
+    <input ng-model = "postEditController.post.author">
     <br>
 
+    <button ng-click = "postEditController.savePostChanges ()">Save Changes</button>
 </form>
