@@ -5,9 +5,12 @@
 <!-- List out the post objects -->
 <ul>
     <li ng-repeat="post in postsController.postList">
-        <strong>title:</strong>{{post.title}}
-        <strong>description:</strong>{{post.description}}
-        <strong>author:</strong>{{post.author}}
+        <div class= "post">
+            <strong>title:</strong>{{post.title}}
+            <strong>description:</strong>{{post.description}}
+            <strong>author:</strong>{{post.author}}
+            <button ng-click="postsController.deletePost(post.id)">Delete Post</button>
+        </div>
     </li>
 </ul>
 
@@ -22,6 +25,8 @@
     <strong>description:</strong> {{ posts.Controller.currentPost.description}}
     <strong>author:</strong> {{ postsController.currentPost.author}}
 </div>
+
+
 
 <form ng-submit = "postsController.save ()">
     <input name="title" ng-model="postsController.title"> <br>
